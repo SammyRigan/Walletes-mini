@@ -1,0 +1,20 @@
+ion-tab-bar {
+    height: 80px;
+    margin: 0 20px;
+    border-top: solid 1px var(--ion-color-accent-shade);
+}
+
+ion-tab-button svg > path:first-child {
+    opacity: 0;
+    transition: .3s;
+}
+
+.tab-selected {
+    svg > path:first-child {
+        opacity: 1;
+    }
+}
+
+// button {
+//     background-color: transparent;
+// }

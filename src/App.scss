@@ -1,0 +1,311 @@
+/* The following line can be included in a src/App.scss */
+// @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&display=swap');
+
+*, pre {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, small, span, p {
+  margin: 0;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+// #ForRadioOptions
+.alert-radio-label.sc-ion-alert-md,
+.alert-radio-label.sc-ion-alert-ios {
+   white-space: normal !important;
+}
+
+.alert-tappable.alert-radio {
+   height: auto !important;
+   contain: content !important;
+}
+
+// #ForCheckbox
+.alert-checkbox-label.sc-ion-alert-md,
+.alert-checkbox-label.sc-ion-alert-ios {
+   white-space: normal !important;
+}
+
+.alert-tappable.alert-checkbox {
+   height: auto !important;
+   contain: content !important;
+}
+
+ion-content.f-tabs {
+  --background: #f6f6f6;
+}
+
+ion-button {
+  display: block;
+  margin: 0;
+  --border-radius: 18px;
+  --box-shadow: 0;
+  text-transform: capitalize;
+
+  &.icon {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+
+  &.ot {
+    --border-radius: 8px;
+  }
+}
+
+.pad {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wrap {
+  padding-top: 40px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  ion-avatar {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.menuButton {
+  width: 30px;
+  display: grid;
+  gap: 10px;
+
+  span {
+    height: 2px;
+    border-radius: 10px;
+    background-color: #000000;
+  }
+}
+
+body.dark {
+  background-color: #06031A;
+
+  .menuButton {
+    span {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.hd-txt {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 30px 20px;
+
+  h4 {
+    font-size: 18px;
+  }
+  
+  span {
+    display: flex;
+    align-items: center;
+    opacity: .5;
+
+    small {
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.cardWrap * {
+  font-family: 'Inconsolata', sans-serif !important;
+}
+
+
+.mod-head {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  margin: 0 20px;
+  // border-bottom: solid 1px var(--ion-color-accent-shade);
+  position: relative;
+
+  ion-icon {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mod-body {
+  // padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form {
+  margin-top: 30px;
+
+  ion-button.save {
+    height: 57px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+h4.form-hd {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-wrap {
+  display: grid;
+  gap: 20px;
+}
+
+.input-wrap {
+  border: solid 1px var(--ion-color-accent-shade);
+  border-radius: 12px;
+  position: relative;
+
+  .in-tl {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: var(--ion-background-color);
+    padding: 5px;
+    transition: .2s;
+  }
+
+  small {
+    opacity: .7;
+    transition: .2s;
+    font-size: 15px;
+  }
+
+  ion-input, ion-select {
+    --highlight-color-focused: transparent;
+    --padding-start: 20px;
+    --placeholder-opacity: 0;
+    transition: .4s;
+  }
+
+  .in-ic {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color:  var(--ion-background-color);
+    z-index: 2;
+  }
+
+  ion-icon {
+    margin: auto;
+    font-size: 20px;
+    opacity: .5;
+  }
+  &:focus-within {
+    border: solid 1px var(--ion-color-primary);
+  }
+
+  &:focus-within, &.checked {
+
+    .in-tl {
+      top: 0;
+      left: 10px;
+
+      small {
+        font-size: 12px;
+        opacity: .5;
+      }
+    }
+
+    ion-input, ion-select {
+      --placeholder-opacity: .3;
+    }
+  }
+}
+
+ion-select::part(icon) {
+  opacity: 0 !important;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+ion-button.opt {
+  --border-color: var(--ion-color-accent-shade);
+  --border-width: 1px;
+  --border-radius: 12px;
+  --padding-start: 10px;
+  height: 58px;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  p {
+    opacity: .7;
+    transition: .2s;
+    font-size: 15px;
+  }
+}
+
+ion-modal > .ion-page {
+  display: block;
+}
+
+  // /* This sets a different background and item background in light mode on ios */
+  // .ios body {
+  //   --ion-background-color: #f2f2f6;
+  //   --ion-toolbar-background: var(--ion-background-color);
+  //   --ion-item-background: #fff;
+  // }
+  
+  // /* This sets a different background and item background in light mode on md */
+  // .md body {
+  //   --ion-background-color: #ffffff;
+  //   --ion-toolbar-background: var(--ion-background-color);
+  //   --ion-item-background: #fff;
+  // }
+  
+  // /* This is added for the flashing that happens when toggling between themes */
+  // ion-item {
+  //   --transition: none;
+  // }
