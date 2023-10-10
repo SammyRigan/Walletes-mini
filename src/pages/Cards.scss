@@ -118,7 +118,8 @@ ion-button.cardItem {
 }
 
 ion-fab {
-    bottom: 10%;
+    position: fixed !important;
+    bottom: 30px;
 }
 
 ion-fab-button {

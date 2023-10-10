@@ -22,6 +22,7 @@ http://ionicframework.com/docs/theming/ */
   /** accent **/
   --ion-color-accent: #ffffff10;
   --ion-color-accent-shade: #00000010;
+  --ion-color-accent-contrast: #000000
   
   /* background */
   --ion-background-color: #ffffff;

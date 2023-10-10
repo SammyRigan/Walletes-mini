@@ -19,7 +19,7 @@ interface ExpiryDate {
     year: string;
 }
 
-const AddCard: React.FC = () => {
+const AddCardComponent: React.FC = () => {
 
     const colors = [
         '#171044',
@@ -158,4 +158,4 @@ const AddCard: React.FC = () => {
     );
 }
 
-export default AddCard;
+export default AddCardComponent;

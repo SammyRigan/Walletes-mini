@@ -8,7 +8,7 @@ import AvatarImg from '../imgs/man.png';
 import VisaLogo from '../imgs/visa.png';
 import MasterCardLogo from '../imgs/mastercard.png';
 import NailIcon from '../imgs/nail.png';
-import AddCard from "../components/AddCard";
+import AddCardComponent from "../components/AddCard";
 
 const Cards: React.FC = () => {
     const modal = useRef<HTMLIonModalElement>(null);
@@ -138,7 +138,7 @@ const Cards: React.FC = () => {
                         <IonIcon icon={closeOutline} onClick={() => modal.current?.dismiss()}></IonIcon>
                         <h4>Add Card</h4>
                     </div>
-                    <AddCard></AddCard>
+                    <AddCardComponent></AddCardComponent>
                 </IonModal>
             </IonContent>
     </IonPage>

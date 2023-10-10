@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&display=swap');
 
+$secondary: #960C99;
+
 *, pre {
   font-family: 'Poppins', sans-serif;
 }
@@ -124,6 +126,16 @@ body.dark {
       font-size: 12px;
       margin-right: 5px;
     }
+  }
+}
+
+.dt {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  small {
+    font-size: 15px;
+    opacity: .7;
   }
 }
 
@@ -287,8 +299,91 @@ ion-button.opt {
   }
 }
 
+.space {
+  height: 20px;
+}
+
+.hr {
+  border-bottom: solid 1px var(--ion-color-accent-shade);
+}
+
 ion-modal > .ion-page {
   display: block;
+  overflow: scroll;
+  // position: relative;
+}
+
+.list {
+  padding: 0 20px;
+  margin-top: -20px;
+}
+
+// WALLETTE / EXP / INC TILE
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: solid 1px var(--ion-color-accent-shade);
+
+  &:last-of-type {
+      border: none;
+  }
+
+  p {
+      font-weight: 500;
+      font-size: 15px;
+  }
+
+  small {
+      font-size: 12px;
+      opacity: .5;
+  }
+}
+
+.ic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: transparentize($color: $secondary, $amount: .85);
+  display: flex;
+  margin-right: 15px;
+  
+  ion-icon {
+      font-size: 15px;
+      margin: auto;
+      color: var(--ion-color-secondary);
+  }
+}
+
+.desc {
+  margin: 0 auto 0 0;
+  width: calc(100% - 170px);
+
+  .mm {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 20px;
+    // background-color: var(--ion-color-accent-shade);
+    margin-top: 7px;
+    overflow: hidden;
+
+    span {
+      display: block;
+      height: 100%;
+      background-color: var(--ion-color-secondary);
+    }
+  }
+}
+
+.px {
+  text-align: right;
+  margin: auto 0 auto auto;
+}
+
+.t-fab {
+  position: fixed;
 }
 
   // /* This sets a different background and item background in light mode on ios */

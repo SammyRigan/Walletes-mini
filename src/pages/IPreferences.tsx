@@ -57,8 +57,8 @@ const IPreferences: React.FC = () => {
     };
 
     return (
-        <IonPage>
-            <IonContent fullscreen>
+        // <IonPage>
+        //     <IonContent fullscreen>
                 <div>
                     <p>jfk</p>
                     {/* <IonToggle checked={darkMode.darkMode}  onIonChange={toggleChange} justify="space-between">
@@ -78,8 +78,8 @@ const IPreferences: React.FC = () => {
                       </IonSegmentButton>
                     </IonSegment>
                 </div>
-            </IonContent>
-        </IonPage>
+        //     </IonContent>
+        // </IonPage>
     );
         }
 
