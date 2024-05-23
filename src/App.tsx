@@ -78,7 +78,7 @@ function App() {
             <Route path="/">
               <Redirect to="/tabs" />
             </Route> */}
-            <Route path='/tabs' component={Tabs}></Route>
+            <Route path='/' component={Tabs}></Route>
           </IonRouterOutlet>
         </IonReactRouter>
       </IonApp>

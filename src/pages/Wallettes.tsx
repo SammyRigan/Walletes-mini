@@ -7,8 +7,10 @@ import styles from './Wallettes.module.scss';
 import budgetStyles from './Budget.module.scss';
 import { OverlayEventDetail } from '@ionic/react/dist/types/components/react-component-lib/interfaces';
 import WalletteDeatilsComponent from '../components/WalletteDetails';
+import AddWalletteComponent from '../components/AddWallette';
 
 const Wallettes: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
     const modal = useRef<HTMLIonModalElement>(null);
     const input = useRef<HTMLIonInputElement>(null);
@@ -160,18 +162,30 @@ const Wallettes: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <IonFab slot="fixed" vertical="bottom" horizontal="end">
+                <IonFab slot="fixed" vertical="bottom" horizontal="end" onClick={() => setIsOpen(true)}>
                     <IonFabButton color={"secondary"}>
                         <IonIcon icon={add}></IonIcon>
                     </IonFabButton>
                 </IonFab>
 
                 <IonModal ref={modal} trigger="open-wallette" onWillDismiss={(ev) => onWillDismiss(ev)}>
-                    <div className="mod-head">
-                        <IonIcon icon={arrowBackOutline} onClick={() => modal.current?.dismiss()}></IonIcon>
-                        <h4>Transportation</h4>
+                    <div className="cast">
+                        <div className="mod-head">
+                            <IonIcon icon={arrowBackOutline} onClick={() => modal.current?.dismiss()}></IonIcon>
+                            <h4>Transportation</h4>
+                        </div>
+                        <WalletteDeatilsComponent></WalletteDeatilsComponent>
                     </div>
-                    <WalletteDeatilsComponent></WalletteDeatilsComponent>
+                </IonModal>
+
+                <IonModal isOpen={isOpen}>
+                    <div className="cast">
+                        <div className="mod-head">
+                            <IonIcon icon={arrowBackOutline} onClick={() => setIsOpen(false)}></IonIcon>
+                            <h4>Create Wallette</h4>
+                        </div>
+                        <AddWalletteComponent></AddWalletteComponent>
+                    </div>
                 </IonModal>
             </IonContent>
         </IonPage>

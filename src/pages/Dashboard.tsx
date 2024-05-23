@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { IonSegment, IonSegmentButton, IonLabel, IonAvatar, IonButton, IonContent, IonIcon, IonImg, IonPage } from '@ionic/react';
 import { Dropdown } from 'react-bootstrap';
-import { chevronDownOutline, addOutline, carSport, fastFood, receipt, pizza } from "ionicons/icons";
+import { chevronDownOutline, addOutline, carSport, fastFood, receipt, pizza, pieChart, pieChartOutline } from "ionicons/icons";
 import './Dashboard.scss';
 
 import AvatarImg from '../imgs/man.png';
 
 const Dashboard: React.FC = () => {
 
-    const [view, toggleView] = useState('analytics');
+    const [view, toggleView] = useState('list');
 
 
     return (
@@ -21,6 +21,20 @@ const Dashboard: React.FC = () => {
                                 <span></span>
                                 <span></span>
                             </div>
+                            
+                            <IonSegment value="default" mode="ios" className='def-seg' hidden>
+                                <IonSegmentButton value="default">
+                                    <IonLabel>
+                                        simple
+                                    </IonLabel>
+                                </IonSegmentButton>
+                                <IonSegmentButton value="segment">
+                                    <IonLabel>
+                                        detailed
+                                    </IonLabel>
+                                </IonSegmentButton>
+                            </IonSegment>
+
                             <IonAvatar>
                                 <IonImg src={AvatarImg}></IonImg>
                             </IonAvatar>
@@ -40,6 +54,28 @@ const Dashboard: React.FC = () => {
                             <h4>$24,509</h4>
                             <small>Remaining Balance <i>$3,478</i></small>
                         </div>
+
+                        <div className="actions" hidden>
+                            <span>
+                                <IonButton>
+                                    <IonIcon icon={pieChartOutline}></IonIcon>
+                                </IonButton>
+                                <small>Add Expense</small>
+                            </span>
+                            <span>
+                                <IonButton>
+                                    <IonIcon icon={pieChartOutline}></IonIcon>
+                                </IonButton>
+                                <small>Add Income</small>
+                            </span>
+                            <span>
+                                <IonButton>
+                                    <IonIcon icon={pieChartOutline}></IonIcon>
+                                </IonButton>
+                                <small>Add Wallette</small>
+                            </span>
+                        </div>
+
                         <div className="addBtn">
                             <span></span>
                             <IonButton className='icon' color={'secondary'}><IonIcon icon={addOutline}></IonIcon></IonButton>

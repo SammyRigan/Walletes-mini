@@ -9,6 +9,7 @@ import { add, carSport, fastFood, pizza, receipt } from 'ionicons/icons';
 const WalletteDeatilsComponent: React.FC = () => {
     return (
         <div className="mod-wrap">
+            <div className="space"></div>
             <div className="segs pad">
                 <IonSegment value="total" mode="ios" className={styles.segment}>
                     <IonSegmentButton value="total">

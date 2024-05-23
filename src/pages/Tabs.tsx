@@ -26,14 +26,14 @@ const Tabs: React.FC = () => {
   
             Use the component prop when your component depends on the RouterComponentProps passed in automatically.
           */}
-            <Route exact path="/tabs/dashboard" render={() => <DashboardPage />} />
-            <Route exact path="/tabs/budget" render={() => <BudgetPage />} />
-            <Route exact path="/tabs/cards" render={() => <CardsPage />} />
-            <Route exact path="/tabs/cards/details" render={() => <CardDetailsPage />} />
-            <Route exact path="/tabs/preferences" render={() => <PreferencesPage />} />
-            <Route exact path="/tabs/wallettes" render={() => <WallettesPage />} />
-            <Route exact path="/tabs">
-              <Redirect to="/tabs/dashboard" />
+            <Route exact path="/dashboard" render={() => <DashboardPage />} />
+            <Route exact path="/budget" render={() => <BudgetPage />} />
+            <Route exact path="/cards" render={() => <CardsPage />} />
+            <Route exact path="/cards/details" render={() => <CardDetailsPage />} />
+            <Route exact path="/preferences" render={() => <PreferencesPage />} />
+            <Route exact path="/wallettes" render={() => <WallettesPage />} />
+            <Route exact path="/">
+              <Redirect to="/dashboard" />
             </Route>
             {/* 
             <Route path="/activities" render={() => <ActivitiesPage />} exact={true} />
@@ -41,7 +41,7 @@ const Tabs: React.FC = () => {
           </IonRouterOutlet>
   
           <IonTabBar slot="bottom">
-            <IonTabButton tab="dashboard" href="/tabs/dashboard">
+            <IonTabButton tab="dashboard" href="/dashboard">
                 <svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 3L3 16H22V7.86957L14 3Z" fill="#960C99"/>
                     <mask id="path-2-inside-1_11_102" fill="white">
@@ -51,7 +51,7 @@ const Tabs: React.FC = () => {
                 </svg>
             </IonTabButton>
   
-            <IonTabButton tab="preferences" href="/tabs/wallettes">
+            <IonTabButton tab="preferences" href="/wallettes">
                 <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.0584 1.81727L4.26901 14.2665L10.4213 14.8985L15.4391 11.1472L14.5863 5.20815L10.0584 1.81727Z" fill="#960C99"/>
                     <circle cx="8" cy="8" r="7" stroke={darkMode.darkMode ? '#ffffff' : '#171044'} strokeWidth="2"/>
@@ -60,7 +60,7 @@ const Tabs: React.FC = () => {
                 </svg>
             </IonTabButton>
   
-            <IonTabButton tab="budget" href="/tabs/budget">
+            <IonTabButton tab="budget" href="/budget">
                 <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25.5 5.00003L19.5001 4.42959L14.8486 10.4259L11 15L24 15L25.7944 15L25.5 5.00003Z" fill="#960C99"/>
                     <path d="M1.63558 4.14645C1.44032 4.34171 1.44032 4.65829 1.63558 4.85355L4.81756 8.03553C5.01283 8.2308 5.32941 8.2308 5.52467 8.03553C5.71993 7.84027 5.71993 7.52369 5.52467 7.32843L2.69624 4.5L5.52467 1.67157C5.71993 1.47631 5.71993 1.15973 5.52467 0.964466C5.32941 0.769204 5.01283 0.769204 4.81756 0.964466L1.63558 4.14645ZM25.3644 4.85355C25.5597 4.65829 25.5597 4.34171 25.3644 4.14645L22.1824 0.964466C21.9872 0.769204 21.6706 0.769204 21.4753 0.964466C21.2801 1.15973 21.2801 1.47631 21.4753 1.67157L24.3038 4.5L21.4753 7.32843C21.2801 7.52369 21.2801 7.84027 21.4753 8.03553C21.6706 8.2308 21.9872 8.2308 22.1824 8.03553L25.3644 4.85355ZM1.98914 5H25.0109V4H1.98914V5Z"  stroke={darkMode.darkMode ? '#ffffff' : '#171044'}/>
@@ -68,7 +68,7 @@ const Tabs: React.FC = () => {
                 </svg>
             </IonTabButton>
   
-            <IonTabButton tab="cards" href="/tabs/cards">
+            <IonTabButton tab="cards" href="/cards">
               <svg width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.7945 2.42956L16.9479 1.13809L11.8486 8.4259L6.74942 15.7137L21.5 14.5L22.7945 12L22.7945 2.42956Z" fill="#960C99"/>
                 <rect x="1" y="1" width="22" height="14" rx="3" stroke={darkMode.darkMode ? '#ffffff' : '#171044'} strokeWidth="2"/>

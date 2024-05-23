@@ -134,11 +134,13 @@ const Cards: React.FC = () => {
                 </IonFab>
 
                 <IonModal ref={modal} trigger="open-modal" onWillDismiss={(ev) => onWillDismiss(ev)}>
-                    <div className="mod-head">
-                        <IonIcon icon={closeOutline} onClick={() => modal.current?.dismiss()}></IonIcon>
-                        <h4>Add Card</h4>
+                    <div className="cast">
+                        <div className="mod-head">
+                            <IonIcon icon={closeOutline} onClick={() => modal.current?.dismiss()}></IonIcon>
+                            <h4>Add Card</h4>
+                        </div>
+                        <AddCardComponent></AddCardComponent>
                     </div>
-                    <AddCardComponent></AddCardComponent>
                 </IonModal>
             </IonContent>
     </IonPage>

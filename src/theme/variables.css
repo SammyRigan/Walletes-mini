@@ -23,9 +23,6 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-accent: #ffffff10;
   --ion-color-accent-shade: #00000010;
   --ion-color-accent-contrast: #000000
-  
-  /* background */
-  --ion-background-color: #ffffff;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -85,6 +82,12 @@ http://ionicframework.com/docs/theming/ */
 
 }
 
+
+.md body {
+  /* background */
+  --ion-background-color: #f6f3ff;
+  --ion-background-accent-color: #ffffff;
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -217,6 +220,8 @@ http://ionicframework.com/docs/theming/ */
   .md body.dark {
     --ion-background-color: #06031A;
     --ion-background-color-rgb: 6,3,26;
+    
+    --ion-background-accent-color: #8d0f8f40;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;

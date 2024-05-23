@@ -9,7 +9,7 @@ import { OverlayEventDetail } from '@ionic/react/dist/types/components/react-com
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const modal = useRef<HTMLIonModalElement>(null);
+    // const modal = useRef<HTMLIonModalElement>(null);
   
     function onWillDismiss(ev: CustomEvent<OverlayEventDetail>) {
         const res = ev;
